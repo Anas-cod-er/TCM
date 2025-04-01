@@ -1,0 +1,579 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Josefin+Sans&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    font-family: "Roboto", sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Top Banner */
+.top-banner {
+    background-color: #B91C1C;
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgb(250, 241, 228);
+    border-bottom: 1px solid #E5E5E5;
+}
+.logo{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo img {
+    height: 50px;
+    mix-blend-mode: multiply;
+}
+.logo h3{
+    margin-top: 14px;
+    margin-left: 18px;
+    color: rgb(67, 83, 52);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+.nav-links :hover{
+    color:#570c0c;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(67, 83, 52);
+    font-weight: 500;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #272626;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+.search-box:hover {
+    border: 3px solid #8B0000;
+}
+
+.search-box input {
+    border: none;
+    background: transparent;
+    padding: 5px;
+    outline: none;
+}
+
+.search-box button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(../Resource/mountain_1.jpg);
+    min-height: 80vh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('path-to-your-pattern.png');
+    opacity: 0.1;
+    z-index: 1;
+}
+
+.hero-content {
+    padding: 100px 50px;
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    font-size: 17px;
+}
+.hero-image{
+    width: 800px;
+    height: auto;
+    mix-blend-mode: multiply;
+}
+.hero-image img{
+    width: 100%;
+    height: 100%;
+}
+
+.hero h1 {
+    color: rgb(67, 83, 52);
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero p {
+    color: #000000;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.animated-text {
+    opacity: 0; /* Start with invisible text */
+    transform: translateY(20px); /* Start 20px below */
+    animation: fadeInUp 2.5s ease-out forwards; /* Animation name, duration, and timing */
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Move to original position */
+    }
+  }
+.shop-now-btn {
+    background-color: rgb(96, 153, 102);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.shop-now-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(1px);
+    color: rgb(67, 83, 52);
+    font-size: 14px;
+}
+/* Add after your existing CSS */
+
+/* Featured Categories Section */
+.Herbal-categories {
+    background-color: rgb(206, 222, 189);
+    padding: 60px 50px;
+    position: relative;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-header h2 {
+    color: #FFFFFF;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 20px 40px;
+    background-color: rgb(96, 153, 102);
+}
+
+.section-header p {
+    color: #FFFFFF;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+.categories-slider {
+    display: flex;
+    gap: 30px;
+    overflow-x: hidden;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-card {
+    flex: 0 0 auto;
+    width: 300px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    position: relative; 
+    display: inline-block;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.category-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+    font-weight: 500;
+}
+.buy-now-btn{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    padding: 20px 30px;
+    background-color: rgba(255, 255, 255, 0.5); 
+    backdrop-filter: blur(1px);
+    color: #333;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+    font-size: medium;
+    font-weight: bolder;
+    cursor: pointer;
+}
+.category-card:hover .buy-now-btn {
+    opacity: 1; 
+  }
+
+
+
+/* Featured Products Section */
+.treatment-products {
+    background-image: url(../Resource/mountain_3.jpg);
+    padding: 60px 50px;
+    margin-bottom: 100px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+/* CSS */
+.container {
+    display: flex;
+    flex-direction: row; /* Aligns the children side by side */
+    justify-content: space-between; /* Adds space between the items */
+    align-items: center; /* Centers the items vertically */
+    gap: 10px; /* Adds spacing between the sections */
+    /* border: 2px solid black; */
+  }
+  
+  .image-section {
+    flex: 1; /* Makes the image section take up one part of the space */
+  }
+  
+  .side-image {
+    width: 100%; /* Ensures the image fits in its container */
+    max-width: 500px; /* Sets a maximum width for the image */
+    height: auto; /* Maintains the aspect ratio */
+  }
+  
+  .text-section {
+    flex: 1; /* Makes the text section take up one part of the space */
+    text-align: start;
+    margin-left: 80px;
+  }
+  
+  .text-section h1{
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  
+  .text-section p{
+    font-size: 1rem;
+    margin-bottom: 20px;
+    /* color: rgb(116, 116, 116) ; */
+    color: #633d04;
+  }
+  
+  .cta-button {
+    padding: 20px 30px;
+    background-color: rgb(96, 153, 102); /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+.ancient-story {
+    padding: 50px 20px;
+    text-align: start;
+    animation: fadeIn 3s ease-out;
+    background: linear-gradient(to bottom, #f8f4e3, #b3a590);
+}
+
+.contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1250px;
+}
+
+.text {
+    flex: 1;
+}
+
+.title {
+    font-size: 1.75rem;
+    color: #8b0000; /* Deep Red */
+    margin-bottom: 15px;
+    margin-top: 60px;
+}
+
+.story-text {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #4f4f4f;
+    margin-bottom: 40px;
+}
+
+.image {
+    flex: 1;
+    margin-top: 30px;
+}
+
+.image img {
+    max-width: 100%;
+    border: 5px solid #8b0000; /* Adds a decorative border */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Team Section */
+.team-section {
+    background-color: #f9f9f9;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.team-section h2 {
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+/* Team Container with Grid Layout */
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 30px; /* Space between team members */
+    justify-items: center; /* Center each item within the grid */
+    margin-top: 30px;
+}
+
+
+/* ai  */
+#chat-container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    padding:20px;
+}
+#chat-container h1{
+    
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#chat-messages {
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+}
+
+.user-message {
+    background-color: #e6f2ff;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.ai-message {
+    background-color: #f0f0f0;
+    align-self: flex-start;
+}
+
+#chat-input-container {
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#send-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Social Media Icons */
+.social-media {
+    /* margin-top: 10px; */
+    margin-bottom: 20px;
+}
+
+.social-icon {
+    margin: 0 8px;
+    color: #f9a825; /* Golden Yellow */
+    font-size: 20px;
+    text-decoration: none;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+.social-icon:hover {
+    color: #ffd700; /* Bright Gold */
+}
+
+/* Email Section */
+.email p {
+    margin-bottom: 10px;
+}
+
+.email a {
+    color: #f9a825;
+    text-decoration: none;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
+
+/* Message Box */
+.message-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.message-box textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+}
+
+.message-box button {
+    padding: 10px 20px;
+    background-color: rgb(96, 153, 102);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.message-box button:hover {
+    background-color: rgb(66, 117, 71);
+}
+
+
+@media (min-width: 1440px) {
+    body {
+        font-size: 18px;
+        max-width: 100%;
+    }
+}
